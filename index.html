@@ -54,9 +54,6 @@
   <link href="https://botdevendas.click/wp-content/plugins/elementor/assets/lib/animations/styles/bounceIn.min.css?ver=3.29.1" id="e-animation-bounceIn-css" media="all" rel="stylesheet"/>
   <link href="https://botdevendas.click/wp-content/plugins/elementor/assets/css/widget-toggle.min.css?ver=3.29.1" id="widget-toggle-css" media="all" rel="stylesheet"/>
   <link href="https://botdevendas.click/wp-content/uploads/elementor/css/post-984.css?ver=1751489523" id="elementor-post-984-css" media="all" rel="stylesheet"/>
-  <link href="https://botdevendas.click/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1742932433" id="elementor-gf-local-roboto-css" media="all" rel="stylesheet"/>
-  <link href="https://botdevendas.click/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1742932451" id="elementor-gf-local-robotoslab-css" media="all" rel="stylesheet"/>
-  <link href="https://botdevendas.click/wp-content/uploads/elementor/google-fonts/css/montserrat.css?ver=1742932475" id="elementor-gf-local-montserrat-css" media="all" rel="stylesheet"/>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
   <style>
@@ -76,13 +73,25 @@
    :root{--joinchat-ico:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M3.516 3.516c4.686-4.686 12.284-4.686 16.97 0s4.686 12.283 0 16.97a12 12 0 0 1-13.754 2.299l-5.814.735a.392.392 0 0 1-.438-.44l.748-5.788A12 12 0 0 1 3.517 3.517zm3.61 17.043.3.158a9.85 9.85 0 0 0 11.534-1.758c3.843-3.843 3.843-10.074 0-13.918s-10.075-3.843-13.918 0a9.85 9.85 0 0 0-1.747 11.554l.16.303-.51 3.942a.196.196 0 0 0 .219.22zm6.534-7.003-.933 1.164a9.84 9.84 0 0 1-3.497-3.495l1.166-.933a.79.79 0 0 0 .23-.94L9.561 6.96a.79.79 0 0 0-.924-.445l-2.023.524a.797.797 0 0 0-.588.88 11.754 11.754 0 0 0 10.005 10.005.797.797 0 0 0 .88-.587l.525-2.023a.79.79 0 0 0-.445-.923L14.6 13.327a.79.79 0 0 0-.94.23z'/%3E%3C/svg%3E")}.joinchat{--sep:20px;--bottom:var(--sep);--s:60px;--h:calc(var(--s)/2);display:block;transform:scale3d(1,1,1);position:fixed;z-index:9000;right:var(--sep);bottom:var(--bottom)}.joinchat *{box-sizing:border-box}.joinchat__qr,.joinchat__chatbox{display:none}.joinchat__tooltip{opacity:0}.joinchat__button{position:absolute;z-index:2;bottom:8px;right:8px;height:var(--s);width:var(--s);background:#25d366 var(--joinchat-ico,none)center / 60% no-repeat;color:inherit;border-radius:50%;box-shadow:1px 6px 24px 0 rgba(7,94,84,0.24)}.joinchat--left{right:auto;left:var(--sep)}.joinchat--left .joinchat__button{right:auto;left:8px}.joinchat__button__ico{position:absolute;inset:0;display:flex;border-radius:50%;overflow:hidden;color:hsl(0deg 0% clamp(0%,var(--bw)*1000%,100%) / clamp(70%,var(--bw)*1000%,100%)) !important}.joinchat__button__ico svg{width:var(--ico-size,100%);height:var(--ico-size,100%);margin:calc((100% - var(--ico-size,100%))/2)}.joinchat__button:has(.joinchat__button__ico){background:hsl(var(--ch)var(--cs)var(--cl));box-shadow:1px 6px 24px 0 hsl(var(--ch)var(--cs)calc(var(--cl) - 10%) / 24%)}.joinchat__button:has(.joinchat__button__ico):hover,.joinchat__button:has(.joinchat__button__ico):active{background:hsl(var(--ch)var(--cs)calc(var(--cl) + 20%))}.joinchat__button__image{position:absolute;inset:1px;border-radius:50%;overflow:hidden;opacity:0}.joinchat__button__image img,.joinchat__button__image video{display:block;width:100%;height:100%;object-fit:cover;object-position:center}.joinchat--img .joinchat__button__image{opacity:1;animation:none}@media(orientation:portrait)and(width>=481px),(orientation:landscape)and(height>=481px){.joinchat--mobile{display:none !important}}@media(width <=480px),(orientation:landscape)and(height <=480px){.joinchat{--sep:6px}}
   </style>
   <script id="jquery-core-js" defer src="https://botdevendas.click/wp-includes/js/jquery/jquery.min.js?ver=3.7.1">
+  <script>
+    window.addEventListener('load', function () {
+      var loadUtmify = function () {
+        if (window._utmifyLoaded) return;
+        var s = document.createElement('script');
+        s.src = 'https://cdn.utmify.com.br/scripts/utms/latest.js';
+        s.async = true;
+        s.defer = true;
+        s.setAttribute('data-utmify-prevent-subids', '');
+        document.head.appendChild(s);
+        window._utmifyLoaded = true;
+      };
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadUtmify, { timeout: 4000 });
+      } else {
+        setTimeout(loadUtmify, 2000);
+      }
+    });
   </script>
-  <script id="jquery-migrate-js" defer src="https://botdevendas.click/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1">
-  </script>
-  <link href="https://botdevendas.click/wp-json/" rel="https://api.w.org/"/>
-  <link href="https://botdevendas.click/wp-json/wp/v2/pages/984" rel="alternate" title="JSON" type="application/json"/>
-  <link href="https://botdevendas.click/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
-  <meta content="WordPress 6.7.2" name="generator"/>
   <link href="https://botdevendas.click/" rel="canonical"/>
   <link href="https://botdevendas.click/" rel="shortlink"/>
   <link href="https://botdevendas.click/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbotdevendas.click%2F" rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"/>
@@ -111,16 +120,27 @@
   </script>
 <!-- Meta Pixel Code -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+n.queue=[]}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1164695192422997');
 fbq('track', 'PageView');
+window.addEventListener('load', function () {
+  var loadPixel = function () {
+    if (window._fbqLoaded) return;
+    var t = document.createElement('script');
+    t.async = true;
+    t.src = 'https://connect.facebook.net/en_US/fbevents.js';
+    document.head.appendChild(t);
+    window._fbqLoaded = true;
+  };
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadPixel, { timeout: 4000 });
+  } else {
+    setTimeout(loadPixel, 2000);
+  }
+});
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1164695192422997&ev=PageView&noscript=1"
@@ -470,36 +490,30 @@ src="https://www.facebook.com/tr?id=1164695192422997&ev=PageView&noscript=1"
       <div class="elementor-element elementor-element-fb4e391 elementor-widget elementor-widget-image" data-element_type="widget" data-id="fb4e391" data-widget_type="image.default">
        <div class="elementor-widget-container">
         <img alt="" class="attachment-full size-full wp-image-local" decoding="async" fetchpriority="low" loading="lazy" height="1920"
-           sizes="(max-width: 2560px) 100vw, 2560px"
+           sizes="(max-width: 767px) 100vw, 800px"
            src="modelagem sinistra/fotos/provas social/provasocialPTGS.png"
-           srcset="modelagem sinistra/fotos/provas social/provasocial1translated.png 2560w,
-                   modelagem sinistra/fotos/provas social/provasocial1translated.png 1024w,
-                   modelagem sinistra/fotos/provas social/provasocial1translated.png 768w,
-                   modelagem sinistra/fotos/provas social/provasocial1translated.png 300w"
+           srcset="modelagem sinistra/fotos/provas social/provasocialPTGS-600w.png 600w,
+             modelagem sinistra/fotos/provas social/provasocialPTGS-1200w.png 1200w"
            width="2560"/>
        </div>
       </div>
       <div class="elementor-element elementor-element-65a3826 elementor-widget elementor-widget-image" data-element_type="widget" data-id="65a3826" data-widget_type="image.default">
        <div class="elementor-widget-container">
         <img alt="" class="attachment-full size-full wp-image-local" decoding="async" fetchpriority="low" loading="lazy" height="1920"
-           sizes="(max-width: 2560px) 100vw, 2560px"
+           sizes="(max-width: 767px) 100vw, 800px"
            src="modelagem sinistra/fotos/provas social/provasocialPTGS2.png"
-           srcset="modelagem sinistra/fotos/provas social/provasocial2translated.png 2560w,
-                   modelagem sinistra/fotos/provas social/provasocial2translated.png 1024w,
-                   modelagem sinistra/fotos/provas social/provasocial2translated.png 768w,
-                   modelagem sinistra/fotos/provas social/provasocial2translated.png 300w"
+           srcset="modelagem sinistra/fotos/provas social/provasocialPTGS2-600w.png 600w,
+             modelagem sinistra/fotos/provas social/provasocialPTGS2-1200w.png 1200w"
            width="2560"/>
        </div>
       </div>
       <div class="elementor-element elementor-element-e8f4ac1 elementor-widget elementor-widget-image" data-element_type="widget" data-id="e8f4ac1" data-widget_type="image.default">
        <div class="elementor-widget-container">
         <img alt="" class="attachment-full size-full wp-image-local" decoding="async" fetchpriority="low" loading="lazy" height="1920"
-           sizes="(max-width: 2560px) 100vw, 2560px"
+           sizes="(max-width: 767px) 100vw, 800px"
            src="modelagem sinistra/fotos/provas social/provasocialPTGS3.png"
-           srcset="modelagem sinistra/fotos/provas social/provasocial3translated.png 2560w,
-                   modelagem sinistra/fotos/provas social/provasocial3translated.png 1024w,
-                   modelagem sinistra/fotos/provas social/provasocial3translated.png 768w,
-                   modelagem sinistra/fotos/provas social/provasocial3translated.png 300w"
+           srcset="modelagem sinistra/fotos/provas social/provasocialPTGS3-600w.png 600w,
+             modelagem sinistra/fotos/provas social/provasocialPTGS3-1200w.png 1200w"
            width="2560"/>
        </div>
       </div>
@@ -839,12 +853,12 @@ A verdade é esta: sem as estratégias certas, as tuas emoções são usadas con
        <div class="elementor-element elementor-element-50d4ca2d elementor-invisible elementor-widget elementor-widget-image" data-element_type="widget" data-id="50d4ca2d" data-settings='{"_animation":"fadeIn"}' data-widget_type="image.default">
         <div class="elementor-widget-container">
          <img alt="" class="attachment-full size-full wp-image-local" decoding="async" fetchpriority="low" loading="lazy" height="1920"
-           sizes="(max-width: 2560px) 100vw, 2560px"
+           sizes="(max-width: 767px) 100vw, 900px"
            src="modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/BONUS-1024x315.png"
-           srcset="modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/AMAZINGBONUS.png 2560w,
-                   modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/AMAZINGBONUS.png 1024w,
-                   modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/AMAZINGBONUS.png 768w,
-                   modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/AMAZINGBONUS.png 300w"
+           srcset="modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/BONUS-300x92.png 300w,
+             modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/BONUS-768x236.png 768w,
+             modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/BONUS-1024x315.png 1024w,
+             modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/BONUS.png 2560w"
            width="2560"/>
         </div>
        </div>
@@ -1259,14 +1273,13 @@ Como fazer alguém sentir a tua falta rapidamente.
        </section>
        <div class="elementor-element elementor-element-1fb1cd9c elementor-widget elementor-widget-image" data-element_type="widget" data-id="1fb1cd9c" data-widget_type="image.default">
         <div class="elementor-widget-container">
-            <img alt="" class="attachment-full size-full wp-image-local" decoding="async" fetchpriority="low" loading="lazy" height="900"
-            sizes="(max-width: 1200px) 100vw, 1200px"
-            src="modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/bandeiras.png"
-            srcset="modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/PURCHASE 100% SECURE (4).png 1200w,
-                    modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/PURCHASE 100% SECURE (4).png 1024w,
-                    modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/PURCHASE 100% SECURE (4).png 768w,
-                    modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/PURCHASE 100% SECURE (4).png 300w"
-            width="1200"/>
+              <img alt="" class="attachment-full size-full wp-image-local" decoding="async" fetchpriority="low" loading="lazy" height="900"
+                sizes="(max-width: 767px) 100vw, 900px"
+                src="modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/bandeiras.png"
+                srcset="modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/bandeiras-600w.png 600w,
+                  modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/bandeiras-900w.png 900w,
+                  modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/bandeiras.png 1200w"
+                width="1200"/>
         </div>
        </div>
       </div>
@@ -1283,14 +1296,14 @@ Como fazer alguém sentir a tua falta rapidamente.
           <div class="elementor-widget-wrap elementor-element-populated">
            <div class="elementor-element elementor-element-3e2537c0 elementor-invisible elementor-widget elementor-widget-image" data-element_type="widget" data-id="3e2537c0" data-settings='{"_animation":"bounceIn"}' data-widget_type="image.default">
             <div class="elementor-widget-container">
-                 <img alt="" class="attachment-full size-full wp-image-local" decoding="async" fetchpriority="low" loading="lazy" height="1920"
-           sizes="(max-width: 2560px) 100vw, 2560px"
-           src="modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/Design-sem-nome-3-1024x1024.png"
-           srcset="modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/7DAYS WARRANTY.png 2560w,
-                   modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/7DAYS WARRANTY.png 1024w,
-                   modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/7DAYS WARRANTY.png 768w,
-                   modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/7DAYS WARRANTY.png 300w"
-           width="2560"/>
+                     <img alt="" class="attachment-full size-full wp-image-local" decoding="async" fetchpriority="low" loading="lazy" height="1920"
+                   sizes="(max-width: 767px) 100vw, 900px"
+                   src="modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/Design-sem-nome-3-1024x1024.png"
+                   srcset="modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/Design-sem-nome-3-300x300.png 300w,
+                     modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/Design-sem-nome-3-768x768.png 768w,
+                     modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/Design-sem-nome-3-1024x1024.png 1024w,
+                     modelagem sinistra/fotos/bonus e 7dias de garantia e bandeiras/Design-sem-nome-3.png 2560w"
+                   width="2560"/>
             </div>
            </div>
           </div>
@@ -1531,30 +1544,30 @@ Como fazer alguém sentir a tua falta rapidamente.
   
   <link href="https://botdevendas.click/wp-content/plugins/creame-whatsapp-me/public/css/joinchat-btn.min.css?ver=6.0.3" id="joinchat-css" media="all" rel="stylesheet"/>
   <link href="https://botdevendas.click/wp-content/plugins/elementor-pro/assets/css/modules/sticky.min.css?ver=3.26.2" id="e-sticky-css" media="all" rel="stylesheet"/>
-  <script id="hello-theme-frontend-js" src="https://botdevendas.click/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=3.4.3">
+  <script defer id="hello-theme-frontend-js" src="https://botdevendas.click/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=3.4.3">
   </script>
   <script data-wp-strategy="defer" defer="" id="joinchat-js" src="https://botdevendas.click/wp-content/plugins/creame-whatsapp-me/public/js/joinchat.min.js?ver=6.0.3">
   </script>
-  <script id="elementor-webpack-runtime-js" src="https://botdevendas.click/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.29.1">
+  <script defer id="elementor-webpack-runtime-js" src="https://botdevendas.click/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.29.1">
   </script>
-  <script id="elementor-frontend-modules-js" src="https://botdevendas.click/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.29.1">
+  <script defer id="elementor-frontend-modules-js" src="https://botdevendas.click/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.29.1">
   </script>
-  <script id="jquery-ui-core-js" src="https://botdevendas.click/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3">
+  <script defer id="jquery-ui-core-js" src="https://botdevendas.click/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3">
   </script>
   <script id="elementor-frontend-js-before">
    var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar","a11yCarouselPrevSlideMessage":"Slide anterior","a11yCarouselNextSlideMessage":"Pr\u00f3ximo slide","a11yCarouselFirstSlideMessage":"Este \u00e9 o primeiro slide","a11yCarouselLastSlideMessage":"Este \u00e9 o \u00faltimo slide","a11yCarouselPaginationBulletMessage":"Ir para o slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Dispositivos m\u00f3veis no modo retrato","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Dispositivos m\u00f3veis no modo paisagem","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet no modo retrato","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet no modo paisagem","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Notebook","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Tela ampla (widescreen)","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.29.1","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_local_google_fonts":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"nested-elements":true,"editor_v2":true,"e_element_cache":true,"home_screen":true,"cloud-library":true,"e_opt_in_v4_page":true},"urls":{"assets":"https:\/\/botdevendas.click\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/botdevendas.click\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/botdevendas.click\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"c0edcb32ad"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"title","hello_footer_logo_type":"logo"},"post":{"id":984,"title":"botdevendas.click","excerpt":"","featuredImage":false}};
   </script>
-  <script id="elementor-frontend-js" src="https://botdevendas.click/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.29.1">
+  <script defer id="elementor-frontend-js" src="https://botdevendas.click/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.29.1">
   </script>
   <span class="elementor-screen-only" id="elementor-device-mode">
   </span>
-  <script id="e-sticky-js" src="https://botdevendas.click/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.26.2">
+  <script defer id="e-sticky-js" src="https://botdevendas.click/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.26.2">
   </script>
-  <script id="elementor-pro-webpack-runtime-js" src="https://botdevendas.click/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.26.2">
+  <script defer id="elementor-pro-webpack-runtime-js" src="https://botdevendas.click/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.26.2">
   </script>
-  <script id="wp-hooks-js" src="https://botdevendas.click/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6">
+  <script defer id="wp-hooks-js" src="https://botdevendas.click/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6">
   </script>
-  <script id="wp-i18n-js" src="https://botdevendas.click/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6">
+  <script defer id="wp-i18n-js" src="https://botdevendas.click/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6">
   </script>
   <script id="wp-i18n-js-after">
    wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
@@ -1562,9 +1575,9 @@ Como fazer alguém sentir a tua falta rapidamente.
   <script id="elementor-pro-frontend-js-before">
    var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/botdevendas.click\/wp-admin\/admin-ajax.php","nonce":"9c0d90231c","urls":{"assets":"https:\/\/botdevendas.click\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/botdevendas.click\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":false},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/botdevendas.click\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
   </script>
-  <script id="elementor-pro-frontend-js" src="https://botdevendas.click/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.26.2">
+  <script defer id="elementor-pro-frontend-js" src="https://botdevendas.click/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.26.2">
   </script>
-  <script id="pro-elements-handlers-js" src="https://botdevendas.click/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.26.2">
+  <script defer id="pro-elements-handlers-js" src="https://botdevendas.click/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.26.2">
   </script>
   <svg class="e-font-icon-svg-symbols" style="display: none;">
   </svg>
